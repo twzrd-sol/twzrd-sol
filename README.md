@@ -23,12 +23,12 @@ const res = await pay(url); // over the cap or wrong payTo: BuyerFetchBlockedErr
 ## Live services
 
 - **[intel.twzrd.xyz](https://intel.twzrd.xyz/skill.md)**: free, read-only seller preflight (`allow | warn | block`) before an agent pays an x402 service.
-- **[outbid.sh](https://outbid.sh/skill.md)**: OpenAI-compatible inference. A paid call is about $0.001 (1000 atomic USDC). Settled Base-paid calls carry an `Outbid-Receipt` v1 signed with the keys at [`/.well-known/outbid-receipt-keys.json`](https://outbid.sh/.well-known/outbid-receipt-keys.json).
+- **[outbid.sh](https://outbid.sh/skill.md)**: OpenAI-compatible inference. A paid call is about $0.001 (1000 atomic USDC). Settled Base-paid calls carry an `Outbid-Receipt` v1 signed with the keys at [`/.well-known/outbid-receipt-keys.json`](https://outbid.sh/.well-known/outbid-receipt-keys.json) ([spec](https://github.com/twzrd-sol/outbid-receipt/blob/main/SPEC.md); verify with `outbid-receipt-verify`).
 
 ## Source
 
 - [twzrd-trust](https://github.com/twzrd-sol/twzrd-trust): gate, mandate, MCP server, verifiers
-- [outbid-receipt](https://github.com/twzrd-sol/outbid-receipt): Outbid-Receipt v1 spec, reference verifier, test vectors
+- [outbid-receipt](https://github.com/twzrd-sol/outbid-receipt): Outbid-Receipt v1 [spec](https://github.com/twzrd-sol/outbid-receipt/blob/main/SPEC.md), reference verifier, test vectors
 - [twzrd-receipt-verifier](https://github.com/twzrd-sol/twzrd-receipt-verifier): offline verifier for TWZRD intel receipts (npm + PyPI)
 
 Buyer-side duplicate-settlement measurements on Base mainnet: [x402#4367](https://github.com/x402-foundation/x402/issues/4367#issuecomment-7144909920).
